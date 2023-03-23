@@ -12,7 +12,7 @@ for i in range(1, num_of_tickets + 1):
     while True:
         try:
             age = int(input(f'Введите возраст посетителя {i}: '))
-            if 120 < age <= 0:
+            if age <= 0 or age > 120:
                 raise ValueError('Вам не может быть столько лет.')
             elif 0 < age < 18:
                 print('Билет  - бесплатный')
