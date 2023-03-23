@@ -6,7 +6,7 @@ while True:
             break
         else:
             raise ValueError
-    except ValueError as error:
+    except ValueError:
         print('Вы ввели неправильное значение.\nВведите положительное целое число.')
 for i in range(1, num_of_tickets + 1):
     while True:
@@ -25,8 +25,7 @@ for i in range(1, num_of_tickets + 1):
                 print(f'Промежуточная сумма к оплате(+ 1390 руб.): {S} руб.')
             if type(age) == int:
                 break
-        except ValueError as error:
-            print(error)
+        except ValueError:
             print('Вы ввели неправильное значение.\nВведите положительное целое число.')
 
 if num_of_tickets > 3:
