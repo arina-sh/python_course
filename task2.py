@@ -25,7 +25,8 @@ for i in range(1, num_of_tickets + 1):
                 print(f'Промежуточная сумма к оплате(+ 1390 руб.): {S} руб.')
             if type(age) == int:
                 break
-        except ValueError:
+        except ValueError as error:
+            print(error)
             print('Вы ввели неправильное значение.\nВведите положительное целое число.')
 
 if num_of_tickets > 3:
